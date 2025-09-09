@@ -9,16 +9,17 @@ const ProductsDetails = () => {
   const [product, setProduct] = useState();
 
   useEffect(() => {
-    axios.get(`https://fakestoreapi.com/products/:id/${id}`).then((resp) => { setProduct(resp.data) });
+    axios.get(`https://fakestoreapi.com/products/${id}`).then((resp) => { setProduct(resp.data) });
   }, []);
 
   return (
     <div className="container">
       <div className="row">
         <div className="col-12">
-          <div className="card">
-            <div className="card-header">{ }</div>
-            <div className="card-body"></div>
+          <div className="card mt-5">
+            <div className="card-header">{product.title}</div>
+            <div className="card-body">
+            </div>
           </div>
         </div>
       </div>
