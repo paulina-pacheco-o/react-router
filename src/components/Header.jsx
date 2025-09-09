@@ -8,13 +8,13 @@ const Header = () => {
         <div className="col-12">
           <ul className="list-unstyled d-flex">
             <li className="me-3">
-              <a href="/">Homepage</a>
+              <NavLink to="/">Homepage</NavLink>
             </li>
             <li className="me-3">
-              <a href="/">Chi siamo</a>
+              <NavLink to="/aboutus">Chi siamo</NavLink>
             </li>
             <li className="me-3">
-              <a href="/">Pagina prodotti</a>
+              <NavLink to="/productspage">Pagina prodotti</NavLink>
             </li>
           </ul>
         </div>
