@@ -1,14 +1,18 @@
-import React from 'react'
+import React from 'react';
+import Header from '../components/Header';
 
 const AboutUs = () => {
   return (
-    <div className="contariner">
-      <div className="row">
-        <div className="col-12">
-          <h1>About Us</h1>
+    <>
+      <Header />
+      <div className="contariner">
+        <div className="row">
+          <div className="col-12">
+            <h1>About Us</h1>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
