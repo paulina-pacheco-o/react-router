@@ -1,0 +1,24 @@
+import React from 'react';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
+
+const ProductsPage = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    axios.get("https://fakestoreapi.com/products").then((resp) => {
+      console.log(resp.data);
+    });
+  }, []);
+  return (
+    <div className="contariner">
+      <div className="row">
+        <div className="col-12">
+          <h1>Products</h1>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default ProductsPage
