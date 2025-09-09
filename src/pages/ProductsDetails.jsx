@@ -2,17 +2,19 @@ import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const ProductsDetails = () => {
 
   const { id } = useParams();
   const [product, setProduct] = useState({});
-  console.log(product)
 
 
   useEffect(() => {
     axios.get(`https://fakestoreapi.com/products/${id}`).then((resp) => { setProduct(resp.data) });
   }, []);
+
+  const navigate = useNavigate();
 
   return (
     <div className="container">
@@ -29,6 +31,9 @@ const ProductsDetails = () => {
           </div>
         </div>
       </div>
+      <button className='btn btn-primary mt-3' onClick={() => navigate(-1)}>
+        Torna alla pagina precedente
+      </button>
     </div>
   )
 }
