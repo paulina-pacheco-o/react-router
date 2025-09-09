@@ -7,15 +7,15 @@ const ProductsDetails = () => {
 
   const { id } = useParams();
   useEffect(() => {
-    axios.get(``)
-  })
+    axios.get(`https://fakestoreapi.com/products/:id/${id}`).then((resp) => { });
+  }, []);
 
   return (
     <div className="container">
       <div className="row">
         <div className="col-12">
           <div className="card">
-            <div className="card-header"></div>
+            <div className="card-header">{ }</div>
             <div className="card-body"></div>
           </div>
         </div>

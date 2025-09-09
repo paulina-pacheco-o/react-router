@@ -32,9 +32,9 @@ const ProductsPage = () => {
                     <p><em>{product.price}</em></p>
                     <p>{product.description}</p>
                   </div>
-                </div>
-                <div className="card-footer">
-                  <Link to={`/productspage/${product.id}`}>Dettagli</Link>
+                  <div className="card-footer">
+                    <Link to={`/productspage/${product.id}`}>Dettagli</Link>
+                  </div>
                 </div>
               </div>
             )
