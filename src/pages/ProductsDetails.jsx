@@ -6,7 +6,9 @@ import { useParams } from 'react-router-dom';
 const ProductsDetails = () => {
 
   const { id } = useParams();
-  const [product, setProduct] = useState();
+  const [product, setProduct] = useState({});
+  console.log(product)
+
 
   useEffect(() => {
     axios.get(`https://fakestoreapi.com/products/${id}`).then((resp) => { setProduct(resp.data) });
@@ -19,6 +21,10 @@ const ProductsDetails = () => {
           <div className="card mt-5">
             <div className="card-header">{product.title}</div>
             <div className="card-body">
+              <img src={product.image} alt={product.title} />
+              <p>{product.price}</p>
+              <p>{product.description}</p>
+              <p>{product.category}</p>
             </div>
           </div>
         </div>
